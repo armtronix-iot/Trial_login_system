@@ -10,7 +10,7 @@ const app = express();
 
 // CORS configuration using env FRONTEND_URL
 const corsOptions = {
-  origin: process.env.FRONTEND_URL,
+  origin: 'https://trial-login-system-frontend.onrender.com',
   methods: ['GET', 'POST'],
   credentials: true, // If using cookies/session
 };

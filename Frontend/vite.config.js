@@ -16,5 +16,9 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
+<<<<<<< HEAD
   }
+=======
+  },
+>>>>>>> 87278cc (added)
 });
