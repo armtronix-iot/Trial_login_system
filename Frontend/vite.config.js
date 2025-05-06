@@ -4,8 +4,10 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: '0.0.0.0',        // Allow external access (e.g., via IP or domain)
-    port: 5176,             // Match your frontend port
-    allowedHosts: ['team.armtronix.net'], // ✅ Allow requests from this domain
+    host: '0.0.0.0',  // This is only needed during local development
+    port: 5176        // Not used in production, but fine to keep
   },
+  build: {
+    outDir: 'dist'
+  }
 });
