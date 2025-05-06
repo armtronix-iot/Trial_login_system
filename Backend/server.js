@@ -35,7 +35,7 @@ mongoose.connect(MONGO_URI, {
     // app.listen(PORT, () => {
     //   console.log(`🚀 Server running on https://192.168.1.220:${PORT}`);
     // });
-    app.listen(PORT, '192.168.1.220', () => {
+    app.listen(PORT, '0.0.0.0', () => {
         console.log(`🚀 Server running on http://192.168.1.220:${PORT}`);
       });
       
