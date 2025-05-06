@@ -14,7 +14,7 @@ function Home() {
 
   const register = async () => {
     try {
-      await axios.post(`${API}/register`, { username, password });
+      await axios.post(`${import.meta.env.VITE_API_URL}/register`, { username, password });
       alert('✅ Registered!');
     } catch (err) {
       alert('❌ Registration failed');
