@@ -4,10 +4,17 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: '0.0.0.0',  // This is only needed during local development
-    port: 5176        // Not used in production, but fine to keep
+    host: '0.0.0.0',
+    port: 5176,
+    proxy: {
+      '/api': {
+        target: 'https://trial-login-system-backend.onrender.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
   },
   build: {
-    outDir: 'dist'
-  }
+    outDir: 'dist',
+  },
 });
